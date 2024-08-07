@@ -6,7 +6,7 @@ const client_secret = clientSecrets.client_secret || null;
 const redirect_uri = clientSecrets.redirect_uris || null;
 const auth_uri = clientSecrets.auth_uri || null;
 const scope =
-   "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtube.force-ssl";
+   "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner";
 
 const login = (req, res) => {
    console.log("Connect to /login");
