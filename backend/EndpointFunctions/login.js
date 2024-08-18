@@ -7,19 +7,17 @@ const scope =
 
 const login = (req, res) => {
    console.log("Connect to /login");
+
    res.redirect(
-      auth_uri +
-         "?scope=" +
-         scope +
-         "&access_type=offline" +
-         "&include_granted_scopes=true" +
-         "&response_type=code" +
-         "&prompt=consent" +
-         "&state=state_parameter_passthrough_value" +
-         "&redirect_uri=" +
-         redirect_uri +
-         "&client_id=" +
-         client_id
+      `https://accounts.google.com/o/oauth2/v2/auth` +
+         `?scope=${scope}` +
+         `&access_type=offline` +
+         `&include_granted_scopes=true` +
+         `&response_type=code` +
+         `&prompt=consent` +
+         `&state=state_parameter_passthrough_value` +
+         `&redirect_uri=${redirect_uri}` +
+         `&client_id=${client_id}`
    );
 };
 module.exports = login;
